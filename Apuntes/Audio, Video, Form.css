@@ -1,0 +1,112 @@
+/* Audio */
+/*
+<audio controls>
+    <source src="multimedia/beach.mp3"/>
+    <source src="multimedia/beach.ogg"/>
+</audio>
+*/
+
+/* Video */
+/*
+<video controls muted autoplay>
+    <source src="multimedia/trailer.mp4"/>
+    <source src="multimedia/trailer.ogg"/>
+</video>
+*/
+
+/* Form */
+/*
+<form enctype = "multipart/form-data" action = "https://inforjardin.000webhostapp.com/" method = "post">
+<fieldset>
+    <legend>Datos identificativos</legend>
+
+    <label for="codSuscripcion">Código de suscripción:</label>
+    <input type="text" id="codSuscripcion" name="codSuscripcion" 
+            size="10" value="INS-00123" readonly/>
+    <label for="numSocio">Nº Socio:</label>
+    <input type="text" id="numSocio" name="numSocio" 
+            size="10" value="123" disabled/>
+    <label for="nomSocio">Usuario:</label>
+    <input type="text" id="nomSocio" name="nomSocio" 
+            maxlength="10" required/>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" 
+            maxlength="10" required/>
+    <label for="repeatPass">Repite Contraseña:</label>
+    <input type="password" id="repeatPass" name="repeatPass"
+            maxlength="10" required/>
+    <label for="fullName">Nombre Completo:</label>
+    <input type="text" id="fullName" name="fullName" 
+            size="30" maxlength="30" autofocus/>
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" 
+            size="10" maxlength="8" pattern="[0-9]{8}"
+            oninvalid="this.setCustomValidity('Debes introducir toda la parte numérica del DNI')"
+            oninput="this.setCustomValidity('')"/>
+    <label for="dniLetra">Letra:</label>
+    <input type="text" id="dniLetra" name="dniLetra" 
+            size="2" maxlength="1" pattern="[A-Z]{1}"
+            oninvalid="this.setCustomValidity('Debes introducir la letra en mayúscula del DNI')"
+            oninput="this.setCustomValidity('')"/>
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" name="direccion" 
+            size="30" maxlength="30"/>
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad" name="ciudad" 
+            size="15" maxlength="15"/>
+    <label for="codPostal">Código Postal:</label>
+    <input type="text" id="codPostal" name="codPostal" 
+            size="5" maxlength="5" pattern="[0-9]*"
+            oninvalid="this.setCustomValidity('Debes introducir tu código postal, un dato numérico')"
+            oninput="this.setCustomValidity('')"/>
+    <label for="nomPais">País:</label>
+    <input type="text" id="nomPais" name="nomPais" 
+            size="7" value="Francia" disabled/>
+</fieldset>
+
+<fieldset>
+    <legend>Datos Bancarios</legend>
+    <input type = "radio" name = "datos_bancarios" value = "1"/>Visa
+    <input type = "radio" name = "datos_bancarios" value = "2" checked/>Master Card
+    <input type = "radio" name = "datos_bancarios" value = "3"/>American Express
+</fieldset>
+
+<fieldset>
+    <legend>Aficiones</legend>
+    <input type = "checkbox" name = "aficiones[]" 
+            value = "1" checked/>Leer
+    <input type = "checkbox" name = "aficiones[]" 
+            value = "2" checked/>Viajar
+    <input type = "checkbox" name = "aficiones[]" 
+            value = "3" checked/>Escuchar música
+    <input type = "checkbox" name = "aficiones[]" 
+            value = "4"/>Deportes
+    <input type = "checkbox" name = "aficiones[]" 
+            value = "5"/>Montaña
+    <input type = "checkbox" name = "aficiones[]" 
+            value = "6" checked/>Juegos de estrategia
+    
+    <details>
+        <summary>Más opciones</summary>
+        <input type = "checkbox" name = "aficiones[]" 
+                value = "7"/>Informática
+        <input type = "checkbox" name = "aficiones[]" 
+                value = "8"/>Jogging
+        <input type = "checkbox" name = "aficiones[]" 
+                value = "9"/>Cine
+    </details>
+</fieldset>
+
+<fieldset>
+    <legend>Enviar información</legend>
+    <details>
+            <summary>Más opciones</summary>
+            <label>Adjuntar resguardo de pago (PDF):</label>
+            <input type = "file" name = "resguardoPagoPDF"><br>
+    </details>
+                                
+    <input type = "submit" value = "Enviar"/>
+    <input type = "reset" value = "Limpiar"/>
+</fieldset>
+</form>
+*/

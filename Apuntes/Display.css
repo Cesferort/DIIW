@@ -1,0 +1,35 @@
+/* Display */
+div
+{
+    display:inline;
+    display:inline-block;   /*los contenedores del ejercicio de font*/
+    display:block;
+
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1.5fr 1fr 2.5fr 1fr;
+    grid-row: 1;
+    grid-column: 1/3;       /*no incluye ultima*/
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+
+    display:table;
+    table-layout: fixed;
+    display: table-row;
+    display: table-caption;
+    caption-side: bottom;
+    display: table-cell;
+
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    justify-content: space-around;
+    justify-content: flex-end;
+    order:3;         /*Cambie el orden del elemento hijo en el display*/
+}

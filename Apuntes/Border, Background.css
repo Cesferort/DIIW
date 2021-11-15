@@ -1,0 +1,34 @@
+/* Border & Background */
+div 
+{
+    box-shadow: 30px 30px 10px green, -30px -30px 10px red, inset 0px 0px 20px red;;
+
+    border-image:url("../imagenes/bordes.png") 33%;
+    border-image:url("../imagenes/bordes.png") 33% round;
+
+    border: 1px solid red;
+    border: 1px dotted red;
+    border: 1px dashed red;
+    border: 1px double red;
+    border: 1px groove red;
+    border: 1px outset red;
+    border-radius: 10px;
+
+    background:
+        url("../imagenes/logo1.png") left top no-repeat,
+        url("../imagenes/logo1.png") right top no-repeat,
+        url("../imagenes/logo1.png") left bottom no-repeat,
+        url("../imagenes/madera1.png") right bottom no-repeat;
+    background-color: rgba(100, 255, 255, 0.5);
+
+    background: url(../imagenes/arriba.gif);
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    background-size:cover;
+
+    /* Casita */
+    background-origin: border-box;
+    background-origin: content-box;
+    background-origin: padding-box;
+}

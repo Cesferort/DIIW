@@ -1,0 +1,123 @@
+body
+{
+    position:absolute;
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
+/*Media queries*/
+@media all and (max-width: 600px) 
+{
+    body{font-size: 20px;}
+}
+@media all and (min-width: 600px) 
+{
+    body{font-size: 50px;}
+}
+
+/* Column */
+div
+{
+    column-count: 3;
+    column-rule: 3px solid red;
+}
+
+/* List */
+ul
+{
+    list-style-type:square;list-style-type:circle;list-style-type:none;
+    list-style-image:url(../../imagenes/clock.png);
+}
+ul li:hover
+{
+    background-image: url(../../imagenes/vert-one_arrow.gif);
+    background-repeat: no-repeat;
+    background-position: .5px center;
+    background-color:#900;
+}
+
+/* Text */
+p
+{
+    letter-spacing: 0.3em;
+    word-spacing: 0.3em;
+
+    color:rgba(255, 0, 0, 0.25);
+    font: bold 25px verdana, sans-serif;
+    font-family: Niconne;
+    font-family: 'Barrio', cursive;
+    font-style: italic;
+    font-style: oblique;
+    font-variant: small-caps;
+    font-weight: bold; 
+    line-height: 2em;
+
+    text-align: center;
+    text-align: justify;
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-indent: 10%;
+    text-shadow: 3px 3px 2px red,6px 6px 2px green,9px 9px 2px lightblue;
+    text-transform: uppercase;
+}
+/* Fonts Externos - 2 formas */
+@font-face 
+{
+    font-family: Niconne;
+    src: url(../fonts/Niconne-Regular.ttf);
+}
+/* 
+<style> 
+    @import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap'); 
+</style> 
+*/
+
+/* Table */
+table, td, th
+{
+    border:1px solid black;
+    border-collapse:collapse;
+}
+
+/* Filter */
+img
+{
+    filter:none;filter:hue-rotate(200deg);filter:brightness(3);filter:contrast(10);filter:blur(4px);
+    filter:saturate(10);filter:invert(1);filter:grayscale(1);filter:sepia(1);filter:opacity(0.3);
+}
+
+
+/* HTML */
+/* 
+sup             - Al cuadrado
+del             - Texto tachado
+colspan="2"     - Ocupar dos columnas
+rowspan="2"     - Ocupar dos filas
+*/
+
+/* CSS */
+/*
+p::after{content: "*";}                         - Añade después
+p:nth-child(2)                                  - Segundo hijo
+p:nth-of-type(2n):not(p:nth-of-type(4))         - Los pares a excepción del cuarto
+div[class="caja1"]                              - Elemento cuyo atributo class sea igual a "caja1"
+z-index:0;                                      - Capa
+overflow: hidden;
+cursor: pointer;
+cursor: w-resize;
+
+float:left;
+clear:both;
+
+li>ul
+{
+    display:none;
+}
+li:hover>ul
+{
+    display:block;
+}
+*/

@@ -1,0 +1,63 @@
+/* Transform */
+div
+{
+    transform: skewX(30deg);
+    transform: scaleY(0.7);transform: scale(2,2);
+    transform: rotate(30deg);
+    transform: translate(20px,20px);
+}
+
+/* Transition */
+div 
+{
+    transition: width 2s;
+    transition-timing-function: ease;/*linear, ease-in, ease-out, ease-in-out*/
+}
+
+/* Animation */
+div 
+{
+    animation-name: animacion;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+@keyframes copo_de_nieve_rotacion
+{
+    from
+    {
+        transform:rotateZ(0deg);
+    }
+    to
+    {
+        transform:rotateZ(775deg);
+    }
+}
+@keyframes animacion 
+{
+    0%   
+    {
+        left:0px; 
+        top:0px;
+    }
+    25%  
+    {
+        left:200px; 
+        top:0px;
+    }
+    50%  
+    {
+        left:200px; 
+        top:200px;
+    }
+    75%  
+    {
+        left:0px; 
+        top:200px;
+    }
+    100% 
+    {
+        left:0px; 
+        top:0px;
+    }
+}

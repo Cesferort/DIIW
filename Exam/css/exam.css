@@ -1,0 +1,349 @@
+@font-face 
+{
+    font-family: BebasNeue-Regular;
+    src: url(../fonts/BebasNeue-Regular.ttf);
+}
+@font-face 
+{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+body
+{
+    position:absolute;
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+
+    font-family: 'Roboto', sans-serif;
+    background-color: dimgray;
+
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 0.2fr;
+}
+.title
+{
+    width:90%;
+    display:block;
+    white-space: nowrap;
+    font-family: BebasNeue-Regular;
+    color: white;
+    text-align: center;
+    word-spacing: 1em;
+    letter-spacing: 0.25em;
+}
+video 
+{
+    width:100%;
+}
+nav 
+{
+    font-size: 10px;
+}
+nav a
+{
+    font-size: 150%;
+    color:black;
+}
+h2
+{
+    font-size: 20px;
+    display:inline;
+    text-transform: uppercase;
+}
+main
+{
+    background-image: url(../img/Logo.webp);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color:white;
+    text-align: justify;
+}
+section, article
+{
+    margin-top:10px;
+}
+main
+{
+    border-bottom: 5px solid white;
+} 
+section:nth-last-of-type(1), aside:nth-of-type(2), hr
+{
+    display:none;
+}
+footer
+{
+    margin-top: 10px;
+    display:flex;
+}
+footer span
+{
+    color:white;
+}
+
+/* Pantallas pequeñas */
+@media all and (max-width: 550px) 
+{
+    header 
+    {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    main 
+    {
+        column-count: 1;
+        grid-column: 1/4;
+        grid-row: 2;
+    }
+    footer 
+    {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    .title
+    {
+        font-size: 20px;
+    }
+    nav
+    {
+        background-color: white;
+        border-radius: 10px;
+        display:flex;
+        justify-content: space-between;
+        padding: 10px;
+        text-transform: uppercase;
+    }
+    footer
+    {
+        flex-direction: column;
+        align-items:center;
+    }
+    footer img
+    {
+        order:0; 
+    }
+    footer span
+    {
+        order:1; 
+    }
+}
+/* Pantallas medianas */
+@media all and (min-width: 550px) 
+{
+    header 
+    {
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    main 
+    {
+        grid-column: 1/4;
+        grid-row: 2;
+        background-image: none;
+    }
+    footer 
+    {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+   
+    main section:nth-of-type(1), main section:nth-of-type(2), main section:nth-of-type(3)
+    {
+        column-count: 2;
+        column-rule: 3px solid white;
+    }
+    nav
+    {
+        display:flex;
+        justify-content: space-evenly;
+        padding: 5px;
+        text-transform: uppercase;
+    }
+    nav a
+    {
+        text-decoration:none;
+        color:white;
+        background-color:rgb(55, 110, 75);
+        border-radius:30px;
+        padding:25px;
+        margin:1px;
+    }
+    footer
+    {
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: end;
+    }
+}
+/* Pantallas grandes */
+@media all and (min-width: 960px) 
+{    
+    header 
+    {
+        grid-column: 1/4;
+        grid-row: 1;
+        width:80%;
+        height:80%;
+        margin:auto;
+    }
+    nav
+    {
+        position:relative;
+        top:-80%;
+
+        display:flex;
+        justify-content: space-between;
+        padding: 5px;
+        text-transform: uppercase;
+        background-color: white;
+        border-radius: 15px;
+    }
+    nav a
+    {
+        text-decoration:overline;
+        background-color:white;
+        color:black;
+    }
+    section 
+    {
+        display:none;
+    }
+    section:nth-last-of-type(1), aside:nth-of-type(2)
+    {
+        display:block;
+    }
+    aside:first-of-type
+    {
+        grid-column: 1;
+        grid-row: 2;
+        background-image: url(../img/Logo.webp);
+        background:
+            url(../img/fondohojas.png) no-repeat,
+            url(../img/Logo.webp) center center no-repeat;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-bottom: 5px solid white;
+        margin-right:5px;
+    }
+    main
+    {
+        background:url(../img/fondohojas.png);
+        grid-column: 2;
+        grid-row: 2;
+        column-count: 3;
+        column-rule: 3px solid white;
+        text-align: initial;
+    }
+    aside:nth-of-type(2)
+    {
+        background:url(../img/fondohojas.png);
+        padding:0px 20px;
+        grid-column: 3;
+        grid-row: 2;
+        color:white;
+        border-bottom: 5px solid white;
+        margin-left:5px;
+    }
+    aside img
+    {
+        animation-name: animacionAside_movimiento, animacionAside_opacidad;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        animation-play-state: paused;
+        position:relative;
+        top:150px;
+        transition: 2s;
+        transition-timing-function: linear;
+    }
+    aside:hover img 
+    {
+        animation-play-state: running;
+    }
+    @keyframes animacionAside_movimiento 
+    {
+        from
+        {
+            top:150px;
+            left:0%; 
+        }
+        to
+        {
+            top:200px;
+            left:100%; 
+        }
+    }
+    @keyframes animacionAside_opacidad 
+    {
+        0% 
+        {
+            opacity:1;
+        }
+        100% 
+        {
+            opacity:0.1;
+        }
+    }
+
+    aside video 
+    {
+        width:100%;
+    }
+    footer
+    {
+        grid-column: 1/4;
+        grid-row: 3;
+    }
+    footer span
+    {
+        display:none;
+    }
+    footer img 
+    {
+        content:url(../img/bici1v2.png);
+        animation-name: animacionFooter_movimiento, animacionFooter_textura;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        position:relative;
+    }
+    footer img:hover 
+    {
+        animation-play-state: paused;
+    }
+    @keyframes animacionFooter_movimiento 
+    {
+        from
+        {
+            left:100%; 
+        }
+        to
+        {
+            left:-10%; 
+        }
+    }
+    @keyframes animacionFooter_textura 
+    {
+        0% 
+        {
+            content:url(../img/bici1v2.png);
+        }
+        40%
+        {
+            content:url(../img/bici3v2.png);
+        }
+        75%
+        {
+            content:url(../img/bici2v2.png);
+        }
+        100% 
+        {
+            content:url(../img/bici2v2.png);
+        }
+    }
+}

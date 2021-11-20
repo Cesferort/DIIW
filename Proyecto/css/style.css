@@ -1,0 +1,503 @@
+/* Fonts */
+@font-face 
+{
+    font-family: ResidentEvil;
+    src: url(../fonts/ResidentEvil7-font.otf);
+}
+@font-face 
+{
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+/* Animations */
+@keyframes anim_header
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}
+@keyframes anim_rotateUmbrellaIcon
+{
+    from
+    {
+        transform: rotateY(0deg);
+    }
+    to
+    {
+        transform: rotateY(180deg);
+    }
+}
+
+main 
+{
+    grid-column: 1;
+    grid-row: 2;
+}
+main>div 
+{
+    padding: 20px;
+    min-height: 200px;
+}
+.img-container 
+{
+    width:30%;
+}
+.aviso-legal
+{
+    background-color: white;
+    color: black;
+    padding: 50px;
+    border-radius: 10px;
+    width: 40%;
+    height: 350px;
+    display:flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.aviso-legal button
+{
+    font-weight: bold;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* HTML and Body */
+html 
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    color: white;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.2fr;
+    
+    font-family: Roboto;
+    letter-spacing: 0.1em;
+}
+.additional_page
+{
+    grid-template-rows: 0.3fr 1fr 0.1fr;
+}
+
+/* HTML Basic Elements */
+h3 
+{
+    font-family: ResidentEvil;
+    font-size: 50px;
+    font-weight: normal;
+    margin: 0px;
+}
+p
+{
+    text-indent: 5%;
+    text-align: justify;
+}
+a
+{
+    color: white;
+    text-decoration: none;
+}
+tr 
+{
+    display: flex;
+    justify-content: space-between;
+}
+video
+{
+    width: 100%;
+    min-width: 400px;
+    filter: brightness(50%);
+}
+footer 
+{
+    grid-column: 1;
+    grid-row: 3;
+    text-align: right;
+    display:flex;
+    justify-content: right;
+    background-color: white;
+}
+footer a 
+{
+    margin-right: 50px;
+    color: black;
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+}
+footer a:nth-last-of-type(1):hover
+{
+    color: rgb(178, 44, 44);
+}
+footer a img 
+{
+    height:32px;    
+}
+
+/* Header */
+header 
+{
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    border-bottom: 1px solid white;
+}
+#header_container
+{
+    position: absolute;
+    text-align: right;
+    top: 4%;    
+    right: 2%;
+    width: 65%;
+}
+#header_container img
+{
+    width: 100%;
+
+    opacity: 0;
+    animation-name: anim_header;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+#header_container ul 
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+#header_container li 
+{
+    margin-bottom: 20px;
+    margin-bottom: 7%;
+    list-style-type: none;
+    
+    opacity: 0;
+    animation-name: anim_header;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+#header_container li a
+{
+    padding-right: 30px;
+    font-size: 18px;
+}
+#header_container li:hover a
+{
+    color: rgb(178, 44, 44);
+    background: url(../img/icon.ico);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px 20px;
+}
+
+/* Header of an additional page */
+.additional_page header 
+{
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    border-bottom: 1px solid white;
+    overflow:hidden;
+    height:50%;
+}
+.additional_page header div 
+{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4%;    
+}
+.additional_page header img 
+{
+    opacity: 0;
+    animation-name: anim_header;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    top:0%;
+}
+
+/* Products page */
+#all_products
+{
+    padding:0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+}
+#all_products div 
+{
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 10px;
+    border: 1.5px solid white;
+    border-radius: 10px;
+}
+#all_products div:hover img 
+{
+    transform: scale(2);
+}
+#all_products div img
+{
+    width: 100%;
+    transition: 1s;
+    transform: scale(1);
+}
+#product_data 
+{
+    display: flex;
+    justify-content: center;
+}
+
+/* Contact page */
+#contact_umbrella img
+{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin: auto;
+
+    opacity: 0.3;
+    animation-name: anim_rotateUmbrellaIcon;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+#contact_umbrella form 
+{
+    z-index: 2;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+
+    padding: 30px;
+    min-width: 280px;
+    max-width: 500px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Buttons and Submit */
+#td_submit
+{
+    width: 100%;
+}
+input[type="submit"]
+{
+    width:100%;
+}
+.button, input[type="submit"]
+{
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    padding: 20px;
+    color: white;
+    border: 1px solid rgb(178, 44, 44);
+    background-color: rgba(178, 44, 44, 0);
+    transition: 0.5s;
+}
+.button:hover, input[type="submit"]:hover 
+{
+    background-color: rgba(178, 44, 44, 0.3);
+}
+
+/* Small screens */
+@media all and (max-width: 750px) 
+{
+    main>div>div 
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .img-container 
+    {
+        margin:auto;
+        width:80%;
+    }
+    .img-container img
+    {
+        width:100%;
+    }
+    #albertWesker, .text-container span  
+    {
+        display: none;
+    }
+    #all_products div 
+    {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+/* Medium-sized screens */
+@media all and (min-width: 750px) and (max-width: 1200px) 
+{
+    body 
+    {
+        font-size: 18px;
+    }
+    h3 
+    {
+        font-size: 65px;
+    }
+    form 
+    {
+        max-width: 700px;
+    }
+    #header_container li a
+    {
+        padding-right: 45px;
+        font-size: 32px;
+    }
+    #header_container li:hover a
+    {
+        background-size: 35px 35px;
+    }
+    main>div>div 
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .img-container 
+    {
+        margin:auto;
+        width:80%;
+    }
+    .img-container img
+    {
+        width:100%;
+    }
+    #albertWesker, .text-container span  
+    {
+        display: none;
+    }
+    #all_products div 
+    {
+        height: 150px;
+        width: 150px;
+    }
+    .aviso-legal
+    {
+        height: 30%;
+    }
+}
+
+/* Big screens */
+@media all and (min-width: 1200px) 
+{  
+    body 
+    {
+        font-size: 19px;
+    }  
+    h3 
+    {
+        font-size: 80px;
+    }
+    form 
+    {
+        max-width: 900px;
+    }
+    #header_container li a
+    {
+        padding-right: 60px;
+        font-size: 45px;
+    }
+    #header_container li:hover a
+    {
+        background-size: 50px 50px;
+    }
+    main>div>div 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .text-container 
+    {
+        max-width: 700px;
+        padding-right:20px;
+    }
+    .text-container span 
+    {
+        color: rgba(255, 255, 255, 0);
+        background-color: white;
+        transition: 2s;
+    }
+    #albertWesker
+    {
+        position: relative;
+        top: 130px;
+        left: 310px;
+        background-color: black;
+        width: 55px;
+        height: 60px;
+        transition: 1s;
+    }
+    #albertWesker:hover 
+    {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    #all_products div 
+    {
+        height: 225px;
+        width: 225px;
+    }
+    .aviso-legal
+    {
+        height: 25%;
+    }
+}
+
+/* Print */
+@media print 
+{
+    footer, .button, header, input[type="submit"], .aviso-legal, .text-container span
+    {
+        display: none;
+    }
+    body 
+    {
+        background-color: white;
+        color: black;
+    }
+    img 
+    {
+        filter: grayscale(1);
+    }
+    #all_products div 
+    {
+        border: 1.5px solid black;
+    }
+}
